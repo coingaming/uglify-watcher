@@ -47,7 +47,7 @@ compileUglifyScript = (file) ->
         file = path.join argv.o, relativePath;
         if not path.existsSync path.dirname file
             mkdirp.sync path.dirname file
-        file.replace(/([^\/\\]+)\.src.js/, "#{prefix}$1.js")
+        file.replace(/([^\/\\]+)\.src.js/, "$1.js")
     watcher_lib.compileFile("uglifyjs #{ file }", file, fnGetOutputFile)
 
 # Starts a poller that polls each second in a directory that's
