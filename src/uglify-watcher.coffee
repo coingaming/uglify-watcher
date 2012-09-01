@@ -26,10 +26,6 @@ program
 # Set defaults
 program.directory = program.directory or '.'
 
-# Print status info
-require('util').puts("Compiling files in `#{program.directory}`.")
-
-
 # Use `watcher-lib`, a library that abstracts away most of the implementation details.
 # This library also makes it possible to implement any watchers (see uglify-watcher for an example).
 watcher_lib = require 'watcher_lib'
