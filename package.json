@@ -1,28 +1,37 @@
 {
-    "name":         "uglify-watcher",
-    "description":  "A script that can watch a directory and minify your javascripts if they change",
-    "keywords":     ["javascript", "reload", "watch", "recompile"],
-    "author":       "hypno2000",
-    "version":      "1.0.0",
-    "licenses": [{
-        "type":       "MIT",
-        "url":        "http://opensource.org/licenses/mit-license.php"
-    }],
+	"name":"uglify-watcher",
+	"description":"A script that can watch a directory and minify your javascripts if they change",
+	"keywords":["javascript", "reload", "watch", "recompile"],
+	"author":"hypno2000",
+	"version":"1.0.0",
+	"licenses":[
+		{
+			"type":"MIT",
+			"url":"http://opensource.org/licenses/mit-license.php"
+		}
+	],
 
-    "engines": {
-        "node":            ">=0.6.0",
-        "watcher_lib":     ">=1.1.0",
-        "commander":       ">=0.6.0"
-    },
+	"engines":{
+		"node":">=0.8.0",
+		"watcher_lib":">=1.1.0",
+		"commander":">=0.6.0"
+	},
 
-    "directories": {
-        "lib" :       "./lib"
-    },
+	"dependencies":{
+		"mkdirp":"*",
+		"optimist":"*",
+		"watcher_lib":"*",
+		"commander":"*"
+	},
 
-    "main" :        "./lib/uglify-watcher",
+	"directories":{
+		"lib":"./lib"
+	},
 
-    "bin": {
-        "uglify-watcher":      "./bin/uglify-watcher"
-    }
+	"main":"./lib/uglify-watcher",
+
+	"bin":{
+		"uglify-watcher":"./bin/uglify-watcher"
+	}
 
 }
