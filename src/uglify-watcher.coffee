@@ -20,6 +20,7 @@ if specs.parse(process.argv).h
 else
     argv = specs.argv
 
+fs = require 'fs'
 path = require 'path'
 mkdirp = require 'mkdirp'
 
@@ -45,7 +46,7 @@ compileUglifyScript = (file) ->
     fnGetOutputFile = (file) ->
         relativePath = path.relative argv.d, file
         file = path.join argv.o, relativePath;
-        if not path.existsSync path.dirname file
+        if not fs.existsSync path.dirname file
             mkdirp.sync path.dirname file
         file.replace(/([^\/\\]+)\.src.js/, "$1.js")
     watcher_lib.compileFile("uglifyjs #{ file }", file, fnGetOutputFile)
